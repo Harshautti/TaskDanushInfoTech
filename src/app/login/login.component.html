@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div class="form">
+     <form action="" [formGroup]="loginForm" (ngSubmit)="login()">
+         <h2>Login</h2>
+         <input type="text" class="form-control " name="username" placeholder="username" formControlName="username">
+         <p class="err-msg" *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.errors?.['required']">Username Required</p>
+         <input type="password" class="form-control" name="password" placeholder="password" formControlName="password">
+         <p class="err-msg" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']">Password Required</p>
+         <button class="btn btn-primary" >Login</button>
+     </form>
+    </div>
+ </div>
+ 

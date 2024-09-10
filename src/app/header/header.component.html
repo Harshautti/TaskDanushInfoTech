@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="navlinks">
+            <a class="navbar-brand" class="home" [routerLink]="['/dashboard']"><mat-icon>home</mat-icon></a>
+            <a routerLink="about" routerLinkActive="active" class="link">About</a>
+        </div>
+       <div class="navsearch">
+        <form class="form-inline">
+            <input class="form-control w-30 search" [(ngModel)]="searchTerm" (input)="filter()" name="search" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success addBtn" type="button" (click)="openDialog()">Add</button>
+            <button class="btn btn-outline-danger logoutBtn" type="button" (click)="logout()">Logout</button>
+          </form>
+       </div>
+      </nav>  
+</div>

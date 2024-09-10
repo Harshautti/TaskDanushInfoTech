@@ -1,0 +1,26 @@
+.container-fluid{
+    width: max-content;
+    margin: 50px;
+}
+.btn-success{
+    margin-top: 15px;
+    padding: 5px;
+}
+.form-control{
+    margin-top: 15px;
+}
+.err-msg{
+    color: red;
+}
+input.ng-touched.ng-invalid {
+    border: 2px solid red !important;
+    box-shadow: 0px 2px 3px rgba(224, 28, 28, 0.6);
+  }
+.head{
+    display: flex;
+    justify-content: space-between;
+}
+.closeIcon{
+    color: red;
+    margin-top: 5px ;
+}

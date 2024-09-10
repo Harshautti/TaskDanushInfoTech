@@ -1,0 +1,18 @@
+<div class="container-fluid">
+   <div class="head">
+    <h2 mat-dialog-title>Add New User</h2>
+    <p (click)="close()" class="closeIcon"><mat-icon>close</mat-icon></p>
+   </div>
+    <form action="" class="form-group" [formGroup]="regForm" (ngSubmit)="addUser()">
+    <input type="text" name="username" class="form-control" formControlName="username" placeholder="Username">
+    <p class="err-msg" *ngIf="regForm.get('username')?.touched && regForm.get('username')?.errors?.['required']">Username Required</p>
+    <p class="err-msg" *ngIf="regForm.get('username')?.touched && regForm.get('username')?.errors?.['minlength']">User Minimum 4 Charcters required</p>
+    <input type="email" name="email" class="form-control" formControlName="email" placeholder="email">
+    <p class="err-msg" *ngIf="regForm.get('email')?.touched && regForm.get('email')?.errors?.['required']">Email Required</p>
+    <p class="err-msg" *ngIf="regForm.get('email')?.touched && regForm.get('email')?.errors?.['email']">Email format Required</p>
+    <input type="number" name="mobile" class="form-control" formControlName="mobile" placeholder="mobile">
+    <p class="err-msg" *ngIf="regForm.get('mobile')?.touched && regForm.get('mobile')?.errors?.['required']">Mobile number required</p>
+    <p class="err-msg" *ngIf="regForm.get('mobile')?.touched && regForm.get('mobile')?.errors?.['minlength']">Mobile number required</p>
+    <button type="submit"  class="btn btn-success">Submit</button>
+</form>
+</div>
